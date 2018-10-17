@@ -22,7 +22,7 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-dark text-left p-5">
               <h1 class="text-center">Register your PIN</h1>
-              <form class="pt-3" action="pin.html" method="get">
+              <form class="pt-3" action="pin.html" method="get" class="cmxform" id="signupForm">
                 <div class="form-group">
                   <label for="domain">Domain</label>
                   <div class="input-group">
@@ -31,7 +31,7 @@
                         <span class="fa fa-globe"></span>
                       </span>
                     </div>
-                    <input type="text" class="form-control form-control-lg border-left-0" id="domain" >
+                    <input type="text" class="form-control form-control-lg border-left-0" id="domain" required>
                   </div>
                 </div>
 				
@@ -43,7 +43,7 @@
                         <span class="fa fa-user"></span>
                       </span>
                     </div>
-                    <input type="text" class="form-control form-control-lg border-left-0" id="username" >
+                    <input type="text" class="form-control form-control-lg border-left-0" id="username" required>
                   </div>
                 </div>
 				
@@ -55,12 +55,12 @@
                         <span class="fa fa-lock"></span>
                       </span>
                     </div>
-                    <input type="password" class="form-control form-control-lg border-left-0" id="password" >                        
+                    <input type="password" class="form-control form-control-lg border-left-0" id="password" required minlength="8" >                        
                   </div>
                 </div>
 				
                 <div class="mt-5">
-                  <submit class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit">REGISTER</submit>
+                  <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit">REGISTER</button>
                 </div>
               </form>
             </div>
@@ -98,6 +98,8 @@
   <script src="js/misc.js"></script>
   <script src="js/settings.js"></script>
   <script src="js/todolist.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="js/bt-maxLength.js"></script>
   <script>
 	d = $('#domain').is(':empty');
 	u = $('#username').is(':empty');
